@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/mccuskero/sandbox/pkg/structs"
+	"github.com/mccuskero/go-sandbox-general/pkg/structs"
 )
 
 func main() {

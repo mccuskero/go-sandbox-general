@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/mccuskero/sandbox/pkg/args"
-	"github.com/mccuskero/sandbox/pkg/structs"
+	"github.com/mccuskero/go-sandbox-general/pkg/args"
+	"github.com/mccuskero/go-sandbox-general/pkg/structs"
 )
 
 func main() {

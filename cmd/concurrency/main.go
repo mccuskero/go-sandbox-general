@@ -6,7 +6,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/mccuskero/sandbox/pkg/concurrency"
+	"github.com/mccuskero/go-sandbox-general/pkg/concurrency"
 )
 
 func doSimpleMessage() {

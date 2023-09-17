@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	contextPkg "github.com/mccuskero/sandbox/pkg/context"
+	contextPkg "github.com/mccuskero/go-sandbox-general/pkg/context"
 )
 
 func main() {

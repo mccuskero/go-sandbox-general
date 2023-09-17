@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/mccuskero/sandbox/pkg/slicing"
+	"github.com/mccuskero/go-sandbox-general/pkg/slicing"
 )
 
 func doMemoryStats() {

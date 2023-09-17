@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/mccuskero/sandbox/pkg/geometry"
+	"github.com/mccuskero/go-sandbox-general/pkg/geometry"
 )
 
 type rectangle struct {

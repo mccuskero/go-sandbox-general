@@ -3,7 +3,7 @@ package args
 import (
 	"fmt"
 
-	"github.com/mccuskero/sandbox/pkg/config"
+	"github.com/mccuskero/go-sandbox-general/pkg/config"
 )
 
 func NewConfigFromOsArgs(len int, args []string) (*config.Config) {
