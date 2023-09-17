@@ -9,16 +9,16 @@ import (
 )
 
 type Event struct {
-	Uuid 		string
-	Payload		string
-	Timestamp 	int64
+	Uuid      string
+	Payload   string
+	Timestamp int64
 }
 
 func CreateEvent() *Event {
 	event := &Event{
-		Uuid: 		uuid.NewRandom().String(),
-		Payload:	randomgen.AlphaNumericString(20),
-		Timestamp:  time.Now().Unix(),
+		Uuid:      uuid.NewRandom().String(),
+		Payload:   randomgen.AlphaNumericString(20),
+		Timestamp: time.Now().Unix(),
 	}
 
 	return event

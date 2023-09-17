@@ -9,7 +9,7 @@ import (
 func main() {
 
 	counter := 0
-	// To play, add/remove the mutex... 
+	// To play, add/remove the mutex...
 	//	var mu sync.Mutex
 
 	const num = 15
@@ -18,7 +18,7 @@ func main() {
 
 	for i := 0; i < num; i++ {
 		go func() {
-			// To play, add/remove the mutex... 
+			// To play, add/remove the mutex...
 			// mu.Lock()
 			temp := counter
 			runtime.Gosched()

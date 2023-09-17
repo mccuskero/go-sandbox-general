@@ -6,7 +6,7 @@ import (
 	"github.com/mccuskero/go-sandbox-general/pkg/config"
 )
 
-func NewConfigFromOsArgs(len int, args []string) (*config.Config) {
+func NewConfigFromOsArgs(len int, args []string) *config.Config {
 
 	fmt.Println("arg len is: ", len)
 

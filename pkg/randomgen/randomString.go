@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-const defaultLowerCaseCharset = "abcdefghijklmnopqrstuvwxyz" 
+const defaultLowerCaseCharset = "abcdefghijklmnopqrstuvwxyz"
 const defaultUpperCaseCharset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const defaultNumericCharset = "0123456789"
 const defaultAlphaNumbericCharset = defaultLowerCaseCharset + defaultUpperCaseCharset + defaultNumericCharset
@@ -51,4 +51,3 @@ func AlphaNumericString(length int) string {
 
 	return string(b)
 }
-

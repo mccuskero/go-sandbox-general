@@ -16,4 +16,3 @@ func Measure(g Geometry) {
 
 	fmt.Println(&g)
 }
-

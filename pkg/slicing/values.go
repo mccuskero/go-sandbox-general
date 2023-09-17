@@ -5,7 +5,7 @@ import (
 )
 
 func CopyArrayByValue() {
-	arr1 := [3]int{1,2,3}
+	arr1 := [3]int{1, 2, 3}
 	arr2 := arr1
 
 	arr2[0] = 0

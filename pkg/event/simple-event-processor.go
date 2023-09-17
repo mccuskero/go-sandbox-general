@@ -17,15 +17,15 @@ func EventLoop(eventChan <-chan *Event, wg *sync.WaitGroup, numEventsProcessed *
 	go func() {
 		fmt.Println("Starting event loop")
 		for run {
-			event, ok := <-eventChan;
-				if ok {
-					handleEvent(event)
-					*numEventsProcessed = *numEventsProcessed + 1
-//					fmt.Printf("%d\n", *numEventsProcessed)
-				} else {
-					fmt.Println("channel is closed exiting")
-					run = false
-				}	
+			event, ok := <-eventChan
+			if ok {
+				handleEvent(event)
+				*numEventsProcessed = *numEventsProcessed + 1
+				//					fmt.Printf("%d\n", *numEventsProcessed)
+			} else {
+				fmt.Println("channel is closed exiting")
+				run = false
+			}
 		}
 
 		// NOTE: the wg.Done() cannot be deferred, a race condition will kick in
@@ -54,7 +54,7 @@ func ProcessEvents(numEvents int) error {
 
 	// send events to eventloop to consume
 	for _, event := range events {
-		eventChan<-event
+		eventChan <- event
 	}
 
 	// close channel, and wait
