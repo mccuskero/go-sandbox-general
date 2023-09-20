@@ -87,6 +87,23 @@ func doReadOnlyWriteOnlySelectChannel() {
 	}
 }
 
+func doBufferedChannelRange() {
+
+	fmt.Println("Starting buffered channel close test.")
+
+	queue := make(chan string, 2)
+
+	queue <- "one"
+	queue <- "two"
+
+	close(queue)
+
+	for element := range queue {
+		fmt.Println("Element: ", element)
+	}
+	fmt.Println("Finished buffered channel close test.")
+}
+
 func main() {
 	fmt.Println("Starting up the concurrency sandbox.")
 	fmt.Printf("The number logical CPU for concurreny is: %d\n", runtime.NumCPU())
@@ -99,4 +116,5 @@ func main() {
 	doReadWriteUnbufferedChannel()
 	doReadOnlyWriteOnlyChannel()
 	doReadOnlyWriteOnlySelectChannel()
+	doBufferedChannelRange()
 }
