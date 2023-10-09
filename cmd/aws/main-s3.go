@@ -16,9 +16,10 @@ import (
 // SSO registration scopes [sso:account:access]:
 
 // ➜  go-sandbox-general git:(main) ✗ export AWS_DEFAULT_PROFILE=AdministratorAccess-773577149418
-// ➜  go-sandbox-general git:(main) ✗ go run ./cmd/aws/main-s3.go                                
+// ➜  go-sandbox-general git:(main) ✗ go run ./cmd/aws/main-s3.go
 // Let's list up to 10 buckets for your account.
-//        mccuskerowen-test-bucket
+//
+//	mccuskerowen-test-bucket
 func main() {
 	awsConfig, err := config.LoadDefaultConfig(context.TODO())
 	if err != nil {
@@ -37,12 +38,12 @@ func main() {
 	if len(result.Buckets) == 0 {
 		fmt.Println("No buckets found")
 		return
-	} 
-	
+	}
+
 	if count > len(result.Buckets) {
 		count = len(result.Buckets)
 	}
-	
+
 	for _, bucket := range result.Buckets[:count] {
 		fmt.Printf("\t%v\n", *bucket.Name)
 	}

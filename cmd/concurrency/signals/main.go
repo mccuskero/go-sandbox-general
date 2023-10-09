@@ -15,7 +15,7 @@ func main() {
 	done := make(chan bool, 1)
 
 	go func() {
-		sig := <- sigs
+		sig := <-sigs
 		fmt.Println()
 		fmt.Println("Received signal: ", sig)
 		done <- true
